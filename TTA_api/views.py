@@ -14,7 +14,7 @@ def homepage(request):
 
 
 
-def generate_audio(prompt, repo_id="cvssp/audioldm2", num_inference_steps=1, audio_length_in_s=10.0):
+def generate_audio(prompt, repo_id="cvssp/audioldm2", num_inference_steps=50, audio_length_in_s=60.0):
     pipe = AudioLDM2Pipeline.from_pretrained(repo_id)
     pipe = pipe.to("cpu")
     audio = pipe(prompt, num_inference_steps=num_inference_steps, audio_length_in_s=audio_length_in_s).audios[0]
