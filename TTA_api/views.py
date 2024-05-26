@@ -5,7 +5,6 @@ from django.http import JsonResponse, HttpResponse
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 import numpy as np
-import numpy as np
 from pydub import AudioSegment
 from io import BytesIO
 
